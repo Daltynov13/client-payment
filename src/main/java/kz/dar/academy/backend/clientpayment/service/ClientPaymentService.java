@@ -19,4 +19,6 @@ public interface ClientPaymentService {
   Page<PaymentResponse> getPaymentEntitiesByClientId(String clientId, Pageable pageable);
 
   PaymentDetails getPaymentDetails(String paymentId);
+
+  void closePaymentById(String paymentId);
 }

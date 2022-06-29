@@ -1,6 +1,8 @@
 package kz.dar.academy.backend.clientpayment.model;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,4 +25,10 @@ public class PaymentEntity implements Serializable {
 
   @Field(type = FieldType.Auto)
   private Long amount;
+
+  @Field(type = FieldType.Auto)
+  private Map<String, Double> paymentList = new HashMap<>();
+
+  @Field(type = FieldType.Auto)
+  private PaymentState state;
 }

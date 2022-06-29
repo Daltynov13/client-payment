@@ -78,4 +78,10 @@ public class ClientPaymentController {
         clientId, pageable);
   }
 
+  @PutMapping("/{paymentId}/pay")
+  public ResponseEntity<String> closePaymentById(@PathVariable String paymentId) {
+    clientPaymentService.closePaymentById(paymentId);
+    return new ResponseEntity<>("Successful paid", OK);
+  }
+
 }
